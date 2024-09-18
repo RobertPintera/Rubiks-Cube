@@ -11,4 +11,4 @@ The control is based on standard notation (https://rubiks.fandom.com/wiki/Notati
 - R key or numpad 2 - R (Right)
 
 # Preview
-![Rubik Cube]{preview/preview%20Rubik%20Cube.gif}
+![Rubik Cube](preview/preview%20Rubik%20Cube.gif)
