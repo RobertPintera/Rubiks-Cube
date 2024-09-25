@@ -268,6 +268,93 @@ void RubikCube::update(optionMove move, bool reverse,float deltaTime)
                 }
             }
             break;
+        case X:
+            for (size_t x = 0; x < 3; x++)
+            {
+                for (size_t y = 0; y < 3; y++)
+                {
+                    if (!activeReverse)
+                    {
+                        cubes[x][y][1]->rotate(speedRotate, glm::vec3(0.f, 0.f, 1.f));
+                        temp[y][2 - x] = cubes[x][y][1];
+                    }
+                    else
+                    {
+                        cubes[x][y][1]->rotate(-speedRotate, glm::vec3(0.f, 0.f, 1.f));
+                        temp[2 - y][x] = cubes[x][y][1];
+                    }
+                }
+            }
+
+            if (!isMoving)
+            {
+                for (size_t x = 0; x < 3; x++)
+                {
+                    for (size_t y = 0; y < 3; y++)
+                    {
+                        cubes[x][y][1] = temp[x][y];
+                    }
+                }
+            }
+            break;
+        case Y:
+            for (size_t x = 0; x < 3; x++)
+            {
+                for (size_t y = 0; y < 3; y++)
+                {
+                    if (!activeReverse)
+                    {
+                        cubes[x][1][y]->rotate(speedRotate, glm::vec3(0.f, 1.f, 0.f));
+                        temp[y][2 - x] = cubes[x][1][y];
+                    }
+                    else
+                    {
+                        cubes[x][1][y]->rotate(-speedRotate, glm::vec3(0.f, 1.f, 0.f));
+                        temp[2 - y][x] = cubes[x][1][y];
+                    }
+                }
+            }
+
+            if (!isMoving)
+            {
+                for (size_t x = 0; x < 3; x++)
+                {
+                    for (size_t y = 0; y < 3; y++)
+                    {
+                        cubes[x][1][y] = temp[x][y];
+                    }
+                }
+            }
+            break;
+        case Z:
+            for (size_t x = 0; x < 3; x++)
+            {
+                for (size_t y = 0; y < 3; y++)
+                {
+                    if (!activeReverse)
+                    {
+                        cubes[1][x][y]->rotate(speedRotate, glm::vec3(1.f, 0.f, 0.f));
+                        temp[y][2 - x] = cubes[1][x][y];
+                    }
+                    else
+                    {
+                        cubes[1][x][y]->rotate(-speedRotate, glm::vec3(1.f, 0.f, 0.f));
+                        temp[2 - y][x] = cubes[1][x][y];
+                    }
+                }
+            }
+
+            if (!isMoving)
+            {
+                for (size_t x = 0; x < 3; x++)
+                {
+                    for (size_t y = 0; y < 3; y++)
+                    {
+                        cubes[1][x][y] = temp[x][y];
+                    }
+                }
+            }
+            break;
         default:
             activeMove = None;
             isMoving = false;

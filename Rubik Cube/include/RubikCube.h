@@ -6,7 +6,7 @@
 
 enum optionMove
 {
-	None, F, R, U, B, L, D
+	None, F, R, U, B, L, D, X, Y, Z
 };
 
 class RubikCube

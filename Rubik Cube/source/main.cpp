@@ -182,6 +182,42 @@ void processInput(GLFWwindow* window)
 			reverse = true;
 		}
 	}
+	else if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_KP_7) == GLFW_PRESS)
+	{
+		move = X;
+		if (!(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS))
+		{
+			reverse = false;
+		}
+		else
+		{
+			reverse = true;
+		}
+	}
+	else if (glfwGetKey(window, GLFW_KEY_Y) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_KP_8) == GLFW_PRESS)
+	{
+		move = Y;
+		if (!(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS))
+		{
+			reverse = false;
+		}
+		else
+		{
+			reverse = true;
+		}
+	}
+	else if (glfwGetKey(window, GLFW_KEY_Z) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_M) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_KP_9) == GLFW_PRESS)
+	{
+		move = Z;
+		if (!(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS))
+		{
+			reverse = false;
+		}
+		else
+		{
+			reverse = true;
+		}
+	}
 	else
 	{
 		move = None;
