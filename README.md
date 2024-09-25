@@ -12,6 +12,7 @@ The control is based on notation from this link: https://rubiks.fandom.com/wiki/
 - M key, X key or numpad 7 - M (Middle)
 - E key, Y key or numpad 8 - E (Equator)
 - S key, Z key or numpad 9 - S (Standing)
+
 You can also rotate in the opposite direction by holding down the shift key.
 
 # Preview
